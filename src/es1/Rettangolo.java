@@ -12,7 +12,8 @@ public class Rettangolo {
 
     public double perimeter(){
         return 2*(this.height+this.width);
-    }public double area(){
+    }
+    public double area(){
         return this.height*this.width;
     }
 
