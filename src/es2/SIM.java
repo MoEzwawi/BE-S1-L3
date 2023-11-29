@@ -7,7 +7,7 @@ public class SIM {
     private double credit = 0;
     private Call[] lastFiveCalls = new Call[5];
 
-    SIM(String number){
+    public SIM(String number){
         if (number.matches("\\d{10}")) this.myNumber=number;
         else throw new IllegalArgumentException("Insert a valid number");
     }
