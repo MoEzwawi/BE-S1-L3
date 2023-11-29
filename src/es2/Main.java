@@ -7,5 +7,6 @@ public class Main {
         SIM b = new SIM("3487690063");
         b.setSomeFakeCalls();
         b.showSIMData();
+        System.out.println(SIM.getOperatore());
     }
 }

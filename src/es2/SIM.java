@@ -6,6 +6,7 @@ public class SIM {
     private final String myNumber;
     private double credit = 0;
     private Call[] lastFiveCalls = new Call[5];
+    private static String operatore = "EpiCalls";
 
     public SIM(String number){
         if (number.matches("\\d{10}")) this.myNumber=number;
@@ -35,5 +36,9 @@ public class SIM {
                 lastFiveCalls[i].showCallData();
             }
         }
+    }
+
+    public static String getOperatore() {
+        return operatore;
     }
 }
