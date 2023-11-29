@@ -15,15 +15,13 @@ public class SIM {
 
     public void setSomeFakeCalls(){
         for(int i=0;i<5;i++) {
-            lastFiveCalls[i] = new Call();
-            Random rnd = new Random();
-            lastFiveCalls[i].setDuration(rnd.nextDouble(30));
             String fakeNumber = "";
             for (int j=0;j<10;j++){
                 Random n = new Random();
                 fakeNumber += n.nextInt(10);
             }
-            lastFiveCalls[i].setPhoneNumber(fakeNumber);
+            Random rnd = new Random();
+            lastFiveCalls[i] = new Call(fakeNumber,rnd.nextDouble(30));
         }
     }
     public void showSIMData(){
@@ -33,7 +31,7 @@ public class SIM {
         else{
             System.out.println("Call log:");
             for (int i = 0; i < lastFiveCalls.length;i++){
-                lastFiveCalls[i].showCallData();
+                System.out.println(lastFiveCalls[i]);
             }
         }
     }

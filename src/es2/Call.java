@@ -3,6 +3,10 @@ package es2;
 public class Call {
     private String phoneNumber;
     private double duration;
+    public Call(String number, double duration){
+        this.phoneNumber = number;
+        this.duration = duration;
+    }
 
     public double getDuration() {
         return duration;
@@ -23,5 +27,13 @@ public class Call {
     public void showCallData(){
         System.out.println("Number: "+ phoneNumber);
         System.out.println("Duration: "+ duration);
+    }
+
+    @Override
+    public String toString() {
+        return "Call{" +
+                "phoneNumber='" + phoneNumber + '\'' +
+                ", duration=" + duration +
+                '}';
     }
 }
